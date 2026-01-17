@@ -12,7 +12,9 @@
   padding: 18px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.18s var(--ease), background 0.22s var(--ease),
+  transition:
+    transform 0.18s var(--ease),
+    background 0.22s var(--ease),
     border-color 0.22s var(--ease);
 }
 
@@ -36,14 +38,25 @@
   content: "";
   position: absolute;
   inset: -2px;
-  background: radial-gradient(380px 260px at 15% 0%, rgba(255, 176, 32, 0.14), transparent 60%),
-    radial-gradient(380px 260px at 90% 100%, rgba(120, 170, 255, 0.1), transparent 60%);
+  background:
+    radial-gradient(
+      380px 260px at 15% 0%,
+      rgba(255, 176, 32, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      380px 260px at 90% 100%,
+      rgba(120, 170, 255, 0.1),
+      transparent 60%
+    );
   opacity: 0;
   transition: opacity 0.25s var(--ease);
   pointer-events: none;
 }
 
-.priceCard:hover::before { opacity: 1; }
+.priceCard:hover::before {
+  opacity: 1;
+}
 .priceCard:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.18);
@@ -53,7 +66,11 @@
 
 .priceCard--popular {
   border-color: rgba(255, 176, 32, 0.28);
-  background: linear-gradient(135deg, rgba(255, 176, 32, 0.12), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 176, 32, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
   box-shadow: 0 28px 90px rgba(255, 176, 32, 0.12);
 }
 
@@ -133,21 +150,13 @@
   font-size: 13px;
 }
 
-@media (max-width: 1040px) {
-  .pricing__grid { grid-template-columns: 1fr; }
-  .pricing__bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 .billingSelector {
   margin-top: 12px;
 }
 .billingBtn {
   padding: 8px 14px;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--muted);
   font-weight: 800;
   font-size: 13px;
@@ -165,10 +174,24 @@
   border-bottom-right-radius: 20px;
 }
 
-.billingBtn:hover { border-color: rgba(255,255,255,0.12); }
+.billingBtn:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
 .billingBtn--active {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: rgba(11,15,23,0.95);
-  border-color: rgba(255,176,32,0.45);
-  box-shadow: 0 16px 46px rgba(255,176,32,0.12);
+  color: rgba(11, 15, 23, 0.95);
+  border-color: rgba(255, 176, 32, 0.45);
+  box-shadow: 0 16px 46px rgba(255, 176, 32, 0.12);
+}
+
+@media (max-width: 768px) {
+  .pricing__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing__grid {
+    grid-template-columns: 1fr;
+  }
 }

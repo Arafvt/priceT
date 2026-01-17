@@ -65,8 +65,19 @@
   line-height: 1.35;
 }
 
-@media (max-width: 760px) {
-  .problemSlider__track {
-    grid-auto-columns: 88%;
+@media (max-width: 768px) {
+  .problemSlide__text b {
+    font-size: 20px;
+  }
+  .problemSlide__text span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .problemSlide__text b {
+    font-size: 18px;
+  }
+  .problemSlide__text span {
+    font-size: 14px;
   }
 }

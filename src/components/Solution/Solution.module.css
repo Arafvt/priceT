@@ -53,8 +53,38 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 768px) {
   .solution__grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .compare {
+    margin: 0 auto;
+  }
+  .benefits {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .benefit_h {
+    font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .compare__img {
+    width: 100%;
+
+    height: auto;
+  }
+  .benefits {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .benefit_h {
+    font-size: 24px;
+  }
+  .benefit_p {
+    font-size: 14px;
   }
 }

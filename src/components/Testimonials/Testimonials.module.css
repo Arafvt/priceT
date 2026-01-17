@@ -170,7 +170,7 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-@media (max-width: 980px) {
+@media (max-width: 768px) {
   .tSlider__viewport {
     grid-auto-columns: minmax(92vw, 92vw);
     padding: 12px 54px;
@@ -182,7 +182,7 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
   .tSlider__nav {
     width: 54px;
     height: 54px;

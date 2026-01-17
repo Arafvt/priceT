@@ -60,15 +60,29 @@
   min-height: 450px;
 }
 
-@media (max-width: 1040px) {
-  .hero__grid { grid-template-columns: 1fr; }
-  .hero__right { min-height: 560px; }
+@media (max-width: 768px) {
+  .hero {
+    margin-bottom: -50px;
+  }
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+  .hero__right {
+    min-height: 560px;
+  }
+  .pill {
+    font-size: 10px;
+  }
 }
 
-@media (max-width: 820px) {
-  .hero__right { min-height: 540px; }
-}
-
-@media (max-width: 520px) {
-  .hero { padding-top: 42px; }
+@media (max-width: 480px) {
+  .img__ss2 {
+    display: none !important;
+  }
+  .img__ss {
+    position: static;
+    margin: 1px auto;
+    width: 300px;
+    height: auto;
+  }
 }
