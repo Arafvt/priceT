@@ -1,0 +1,60 @@
+.solution__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  align-items: start;
+}
+
+.compare {
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.compare__beam {
+  position: absolute;
+  inset: -2px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.compare__body {
+  position: relative;
+  z-index: 1;
+}
+
+.compare__img {
+  width: 570px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.benefits {
+  display: grid;
+  gap: 8px;
+  width: 80%;
+  margin-top: 65px;
+}
+
+.benefit_inf {
+  margin-bottom: 18px;
+}
+
+.benefit_h {
+  margin: 0 0 8px;
+  font-size: 36px;
+  letter-spacing: -0.35px;
+}
+
+.benefit_p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1040px) {
+  .solution__grid {
+    grid-template-columns: 1fr;
+  }
+}

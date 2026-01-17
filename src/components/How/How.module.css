@@ -1,0 +1,111 @@
+.howCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.howCard {
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px 22px;
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.18s var(--ease), background 0.22s var(--ease),
+    border-color 0.22s var(--ease);
+}
+
+.howCard::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(360px 240px at 50% 0%, rgba(255, 176, 32, 0.18), transparent 60%),
+    radial-gradient(360px 240px at 50% 100%, rgba(120, 170, 255, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s var(--ease);
+  pointer-events: none;
+}
+
+.howCard:hover::before { opacity: 1; }
+.howCard:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.howCard--accent {
+  border-color: rgba(255, 176, 32, 0.28);
+  background: linear-gradient(135deg, rgba(255, 176, 32, 0.12), rgba(255, 255, 255, 0.04));
+}
+
+.howCard__num {
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(11, 15, 23, 0.95);
+  background: linear-gradient(135deg, rgba(255, 210, 122, 1), rgba(255, 176, 32, 1));
+  border: 1px solid rgba(255, 176, 32, 0.55);
+  box-shadow: 0 18px 55px rgba(255, 176, 32, 0.16);
+}
+
+.howCard__title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.howCard__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 36ch;
+}
+
+.facts {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.fact {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.fact b {
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.fact span {
+  color: var(--muted2);
+  font-size: 13px;
+}
+
+@media (max-width: 1040px) {
+  .howCards { grid-template-columns: 1fr; }
+  .howCard { min-height: 220px; padding: 28px 20px; }
+}
+
+@media (max-width: 820px) {
+  .facts { grid-template-columns: 1fr; }
+}

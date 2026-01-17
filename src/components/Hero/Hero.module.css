@@ -1,0 +1,74 @@
+.hero {
+  padding: 54px 0 26px;
+  margin-top: 50px;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.img__ss {
+  margin-top: 50px;
+  position: absolute;
+  margin-left: -550px;
+  width: 250px;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.img__ss2 {
+  margin-top: 100px;
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.pill__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(255, 176, 32, 0.12);
+}
+
+.hero__right {
+  position: relative;
+  min-height: 450px;
+}
+
+@media (max-width: 1040px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__right { min-height: 560px; }
+}
+
+@media (max-width: 820px) {
+  .hero__right { min-height: 540px; }
+}
+
+@media (max-width: 520px) {
+  .hero { padding-top: 42px; }
+}
